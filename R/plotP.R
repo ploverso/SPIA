@@ -18,8 +18,8 @@ msg<-paste("The threshold value should be",x[1,"pGFdr"],"or higher!!!");
  combinemethod=ifelse(sum(combfunc(pb,ph,"fisher")==x$pG)>sum(combfunc(pb,ph,"norminv")==x$pG),"fisher","norminv")
  
  
- okx<-(ph<1e-6)
- oky<-(pb<1e-6)
+ okx<-(ph<0.05)
+ oky<-(pb<0.05)
 
  ph[ph<1e-6]<-1e-6
  pb[pb<1e-6]<-1e-6
